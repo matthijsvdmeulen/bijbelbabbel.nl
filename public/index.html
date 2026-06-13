@@ -55,6 +55,13 @@
                     <p>Onder begeleiding van <strong>dominee Axel Wicke</strong> verkennen we samen de Bijbel. Hij geeft tekst en uitleg bij allerhande vraagstukken over of rondom de Bijbel, en nodigt ons uit om met elkaar in gesprek te gaan over hoe we bepaalde verhalen, passages en thema's interpreteren.</p>
                     <p>Er is geen vaste agenda of verplichting: kom wanneer het je uitkomt, neem deel aan het gesprek en laat je verrassen. Twijfels, vragen en nieuwsgierigheid zijn hier meer dan welkom.</p>
                     <p>Wij zijn een <strong>progressieve en vrijzinnige</strong> geloofsgemeenschap en geloven dat de Bijbel pas echt leeft wanneer mensen er samen over in gesprek gaan.</p>
+                    <div class="person-card">
+                        <img src="images/axel.webp" alt="Dominee Axel Wicke" class="person-photo">
+                        <div class="person-card-info">
+                            <strong>Dominee Axel Wicke</strong>
+                            <span>Begeleider Bijbelbabbel</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="content-cards">
                     <div class="info-card">
@@ -74,18 +81,25 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="meenemen-block">
-                <h3>Wat neem je mee?</h3>
-                <div class="meenemen-grid">
-                    <div class="meenemen-item">
-                        <h4>Bijbel — NBV21 of NBV</h4>
-                        <p>Wij werken doorgaans met de <strong>NBV21</strong> (Nieuwe Bijbelvertaling 2021) of de NBV. Heb je thuis een bijbel? Neem die gerust mee — elke vertaling is welkom.</p>
-                    </div>
-                    <div class="meenemen-item">
-                        <h4>Geen bijbel? Geen probleem</h4>
-                        <p>Wij hebben altijd een aantal reserve-exemplaren bij de hand. Heb je (nog) geen bijbel, dan hoeft dat absoluut geen drempel te zijn om aan te sluiten.</p>
-                    </div>
+    <!-- Wat neem je mee -->
+    <section id="meenemen" class="section section-beige">
+        <div class="container">
+            <div class="section-label">Praktisch</div>
+            <h2>Wat neem je mee?</h2>
+            <p class="section-intro">Verdere voorbereiding is niet nodig — kom gewoon langs.</p>
+            <div class="meenemen-cards">
+                <div class="info-card">
+                    <div class="info-card-icon" aria-hidden="true">✦</div>
+                    <h3>Bijbel — NBV21 of NBV</h3>
+                    <p>Wij werken doorgaans met de <strong>NBV21</strong> (Nieuwe Bijbelvertaling 2021) of de NBV. Heb je thuis een bijbel? Neem die gerust mee — elke vertaling is welkom.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon" aria-hidden="true">✦</div>
+                    <h3>Geen bijbel? Geen probleem</h3>
+                    <p>Wij hebben altijd een aantal reserve-exemplaren bij de hand. Heb je (nog) geen bijbel, dan hoeft dat absoluut geen drempel te zijn om aan te sluiten.</p>
                 </div>
             </div>
         </div>
@@ -109,7 +123,18 @@
                         <h3>Bijbelbabbel</h3>
                         <p><strong>Tijd:</strong> 19:30 uur</p>
                         <p><strong>Locatie:</strong> GJV Zolder, De Vinkenhof — Achterzeeweg 1, Noordwijk</p>
-                        <a href="#locatie" class="agenda-link">Routebeschrijving ↓</a>
+                        <div class="agenda-actions">
+                            <a href="#locatie" class="agenda-link">Routebeschrijving ↓</a>
+                            <div class="cal-picker">
+                                <button class="cal-btn" onclick="toggleCalMenu(this)" aria-expanded="false">
+                                    + Toevoegen aan agenda
+                                </button>
+                                <div class="cal-menu" hidden>
+                                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bijbelbabbel&dates=20260616T173000Z%2F20260616T193000Z&details=Bijbelkring+onder+leiding+van+dominee+Axel+Wicke.&location=GJV+Zolder%2C+De+Vinkenhof%2C+Achterzeeweg+1%2C+2201+EM+Noordwijk" target="_blank" rel="noopener">Google Agenda</a>
+                                    <button onclick="downloadICS()">Apple / Outlook (.ics)</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="agenda-item agenda-item-tbd">
@@ -174,7 +199,9 @@
             <h2>Contact</h2>
             <p class="section-intro">Heb je vragen over de Bijbelbabbel, of wil je weten wanneer de volgende bijeenkomst plaatsvindt? Neem dan contact op met onze contactpersoon.</p>
             <div class="contact-card">
-                <div class="contact-avatar" aria-hidden="true">J</div>
+                <div class="contact-avatar">
+                    <img src="images/jasper.webp" alt="Jasper van den Bogaard">
+                </div>
                 <div class="contact-info">
                     <h3>Jasper van den Bogaard</h3>
                     <p>Contactpersoon Bijbelbabbel</p>
@@ -221,6 +248,55 @@
     </footer>
 
     <script>
+        // Add-to-calendar dropdown
+        function toggleCalMenu(btn) {
+            var menu = btn.nextElementSibling;
+            var open = menu.hasAttribute('hidden');
+            if (open) {
+                menu.removeAttribute('hidden');
+                btn.setAttribute('aria-expanded', 'true');
+                setTimeout(function () {
+                    document.addEventListener('click', function closeCal(e) {
+                        if (!btn.closest('.cal-picker').contains(e.target)) {
+                            menu.setAttribute('hidden', '');
+                            btn.setAttribute('aria-expanded', 'false');
+                            document.removeEventListener('click', closeCal);
+                        }
+                    });
+                }, 0);
+            } else {
+                menu.setAttribute('hidden', '');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        }
+
+        function downloadICS() {
+            var lines = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//Bijbelbabbel Noordwijk//NL',
+                'CALSCALE:GREGORIAN',
+                'BEGIN:VEVENT',
+                'UID:20260616-bijbelbabbel@bijbelbabbel.nl',
+                'DTSTART:20260616T173000Z',
+                'DTEND:20260616T193000Z',
+                'SUMMARY:Bijbelbabbel',
+                'DESCRIPTION:Bijbelkring onder leiding van dominee Axel Wicke.',
+                'LOCATION:GJV Zolder\\, De Vinkenhof\\, Achterzeeweg 1\\, 2201 EM Noordwijk',
+                'END:VEVENT',
+                'END:VCALENDAR'
+            ];
+            var blob = new Blob([lines.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = 'bijbelbabbel-16-juni-2026.ics';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
         // Email obfuscation — assembled at runtime to hinder scrapers
         (function () {
             var u = 'jasper';
