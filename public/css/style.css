@@ -383,28 +383,12 @@ header#home h1 {
 .info-card p  { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
 
 /* ── Wat neem je mee ─────────────────────────────────────── */
-.meenemen-block {
-    margin-top: 2.5rem;
-    background: var(--glass-light);
-    backdrop-filter: blur(20px) saturate(150%);
-    -webkit-backdrop-filter: blur(20px) saturate(150%);
-    border: 1px solid var(--glass-border);
-    border-left: 3px solid var(--green);
-    border-radius: var(--radius);
-    padding: 2rem 2.25rem;
-    box-shadow: var(--shadow-sm), var(--glass-inset);
-}
-
-.meenemen-block h3 { color: var(--green-dark); margin-bottom: 1rem; }
-
-.meenemen-grid {
+.meenemen-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem 2rem;
+    gap: 1.25rem;
+    margin-top: 0.5rem;
 }
-
-.meenemen-item h4 { color: var(--green); margin-bottom: 0.4rem; }
-.meenemen-item p  { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
 
 /* ── Agenda ──────────────────────────────────────────────── */
 .agenda-list {
@@ -654,7 +638,7 @@ footer ul li a:hover { opacity: 1; color: var(--white); }
     .nav-links a { padding: 0.75rem 1.5rem; display: block; }
     .nav-toggle { display: flex; }
 
-    .meenemen-grid { grid-template-columns: 1fr; }
+    .meenemen-cards { grid-template-columns: 1fr; }
 
     .agenda-item { flex-direction: column; gap: 1rem; }
     .agenda-date-block {
