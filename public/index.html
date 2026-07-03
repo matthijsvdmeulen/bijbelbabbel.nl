@@ -109,37 +109,98 @@
         <div class="container">
             <div class="section-label">Bijeenkomsten</div>
             <h2>Agenda</h2>
-            <p class="section-intro">De Bijbelbabbel vindt niet op vaste avonden plaats. Hieronder vind je de eerstvolgende bijeenkomst. Houd deze pagina of het <a href="#contact">contact</a> in de gaten voor nieuwe data.</p>
-            <div class="agenda-list">
-                <div class="agenda-item agenda-item-next">
+            <p class="section-intro">De Bijbelbabbel vindt niet op vaste avonden plaats. Hieronder vind je de komende bijeenkomsten. Houd deze pagina of het <a href="#contact">contact</a> in de gaten voor nieuwe data.</p>
+            <div class="agenda-list" id="agenda-list">
+                <div class="agenda-item" data-date="2026-06-16" data-ics-date="20260616" data-ics-label="16-juni-2026">
                     <div class="agenda-date-block">
                         <span class="agenda-day">16</span>
                         <span class="agenda-month">juni</span>
                         <span class="agenda-year">2026</span>
                     </div>
                     <div class="agenda-details">
-                        <span class="agenda-badge">Eerstvolgende bijeenkomst</span>
+                        <div class="agenda-item-header">
+                            <span class="agenda-badge">Eerstvolgende bijeenkomst</span>
+                            <div class="cal-picker">
+                                <button class="cal-btn" onclick="toggleCalMenu(this)" aria-expanded="false">+ Agenda</button>
+                                <div class="cal-menu" hidden>
+                                    <a class="gc-link" href="#" target="_blank" rel="noopener">Google Agenda</a>
+                                    <button onclick="downloadICSFromItem(this)">Apple / Outlook (.ics)</button>
+                                </div>
+                            </div>
+                        </div>
                         <h3>Bijbelbabbel</h3>
                         <p><strong>Tijd:</strong> 19:30 uur</p>
                         <p><strong>Locatie:</strong> GJV Zolder, De Vinkenhof — Achterzeeweg 1, Noordwijk</p>
                         <a href="#locatie" class="agenda-link">Routebeschrijving ↓</a>
                     </div>
-                    <div class="cal-picker">
-                        <button class="cal-btn" onclick="toggleCalMenu(this)" aria-expanded="false">+ Agenda</button>
-                        <div class="cal-menu" hidden>
-                            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bijbelbabbel&dates=20260616T173000Z%2F20260616T193000Z&details=Bijbelkring+onder+leiding+van+dominee+Axel+Wicke.&location=GJV+Zolder%2C+De+Vinkenhof%2C+Achterzeeweg+1%2C+2201+EM+Noordwijk" target="_blank" rel="noopener">Google Agenda</a>
-                            <button onclick="downloadICS()">Apple / Outlook (.ics)</button>
-                        </div>
-                    </div>
                 </div>
-                <div class="agenda-item agenda-item-tbd">
-                    <div class="agenda-date-block agenda-date-tbd">
-                        <span class="agenda-day">?</span>
-                        <span class="agenda-month">volgende</span>
+                <div class="agenda-item" data-date="2026-07-16" data-ics-date="20260716" data-ics-label="16-juli-2026">
+                    <div class="agenda-date-block">
+                        <span class="agenda-day">16</span>
+                        <span class="agenda-month">juli</span>
+                        <span class="agenda-year">2026</span>
                     </div>
                     <div class="agenda-details">
-                        <h3>Volgende bijeenkomst</h3>
-                        <p>De datum van de volgende bijeenkomst wordt later bekend gemaakt. Neem <a href="#contact">contact op met Jasper</a> om op de hoogte te blijven.</p>
+                        <div class="agenda-item-header">
+                            <span class="agenda-badge">Eerstvolgende bijeenkomst</span>
+                            <div class="cal-picker">
+                                <button class="cal-btn" onclick="toggleCalMenu(this)" aria-expanded="false">+ Agenda</button>
+                                <div class="cal-menu" hidden>
+                                    <a class="gc-link" href="#" target="_blank" rel="noopener">Google Agenda</a>
+                                    <button onclick="downloadICSFromItem(this)">Apple / Outlook (.ics)</button>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Bijbelbabbel</h3>
+                        <p><strong>Tijd:</strong> 19:30 uur</p>
+                        <p><strong>Locatie:</strong> GJV Zolder, De Vinkenhof — Achterzeeweg 1, Noordwijk</p>
+                        <a href="#locatie" class="agenda-link">Routebeschrijving ↓</a>
+                    </div>
+                </div>
+                <div class="agenda-item" data-date="2026-07-30" data-ics-date="20260730" data-ics-label="30-juli-2026">
+                    <div class="agenda-date-block">
+                        <span class="agenda-day">30</span>
+                        <span class="agenda-month">juli</span>
+                        <span class="agenda-year">2026</span>
+                    </div>
+                    <div class="agenda-details">
+                        <div class="agenda-item-header">
+                            <span class="agenda-badge">Eerstvolgende bijeenkomst</span>
+                            <div class="cal-picker">
+                                <button class="cal-btn" onclick="toggleCalMenu(this)" aria-expanded="false">+ Agenda</button>
+                                <div class="cal-menu" hidden>
+                                    <a class="gc-link" href="#" target="_blank" rel="noopener">Google Agenda</a>
+                                    <button onclick="downloadICSFromItem(this)">Apple / Outlook (.ics)</button>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Bijbelbabbel</h3>
+                        <p><strong>Tijd:</strong> 19:30 uur</p>
+                        <p><strong>Locatie:</strong> GJV Zolder, De Vinkenhof — Achterzeeweg 1, Noordwijk</p>
+                        <a href="#locatie" class="agenda-link">Routebeschrijving ↓</a>
+                    </div>
+                </div>
+                <div class="agenda-item" data-date="2026-08-20" data-ics-date="20260820" data-ics-label="20-augustus-2026">
+                    <div class="agenda-date-block">
+                        <span class="agenda-day">20</span>
+                        <span class="agenda-month">aug</span>
+                        <span class="agenda-year">2026</span>
+                    </div>
+                    <div class="agenda-details">
+                        <div class="agenda-item-header">
+                            <span class="agenda-badge">Eerstvolgende bijeenkomst</span>
+                            <div class="cal-picker">
+                                <button class="cal-btn" onclick="toggleCalMenu(this)" aria-expanded="false">+ Agenda</button>
+                                <div class="cal-menu" hidden>
+                                    <a class="gc-link" href="#" target="_blank" rel="noopener">Google Agenda</a>
+                                    <button onclick="downloadICSFromItem(this)">Apple / Outlook (.ics)</button>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Bijbelbabbel</h3>
+                        <p><strong>Tijd:</strong> 19:30 uur</p>
+                        <p><strong>Locatie:</strong> GJV Zolder, De Vinkenhof — Achterzeeweg 1, Noordwijk</p>
+                        <a href="#locatie" class="agenda-link">Routebeschrijving ↓</a>
                     </div>
                 </div>
             </div>
@@ -265,16 +326,19 @@
             }
         }
 
-        function downloadICS() {
+        function downloadICSFromItem(btn) {
+            var item = btn.closest('.agenda-item');
+            var icsDate = item.dataset.icsDate;
+            var icsLabel = item.dataset.icsLabel;
             var lines = [
                 'BEGIN:VCALENDAR',
                 'VERSION:2.0',
                 'PRODID:-//Bijbelbabbel Noordwijk//NL',
                 'CALSCALE:GREGORIAN',
                 'BEGIN:VEVENT',
-                'UID:20260616-bijbelbabbel@bijbelbabbel.nl',
-                'DTSTART:20260616T173000Z',
-                'DTEND:20260616T193000Z',
+                'UID:' + icsDate + '-bijbelbabbel@bijbelbabbel.nl',
+                'DTSTART:' + icsDate + 'T173000Z',
+                'DTEND:' + icsDate + 'T193000Z',
                 'SUMMARY:Bijbelbabbel',
                 'DESCRIPTION:Bijbelkring onder leiding van dominee Axel Wicke.',
                 'LOCATION:GJV Zolder\\, De Vinkenhof\\, Achterzeeweg 1\\, 2201 EM Noordwijk',
@@ -285,11 +349,40 @@
             var url = URL.createObjectURL(blob);
             var a = document.createElement('a');
             a.href = url;
-            a.download = 'bijbelbabbel-16-juni-2026.ics';
+            a.download = 'bijbelbabbel-' + icsLabel + '.ics';
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
+        }
+
+        function updateAgendaItems() {
+            var today = new Date();
+            today.setHours(0, 0, 0, 0);
+            var items = document.querySelectorAll('.agenda-item[data-date]');
+            var firstNext = true;
+            items.forEach(function(item) {
+                var parts = item.dataset.date.split('-').map(Number);
+                var itemDate = new Date(parts[0], parts[1] - 1, parts[2]);
+                var dayAfter = new Date(itemDate.getTime());
+                dayAfter.setDate(dayAfter.getDate() + 1);
+                if (dayAfter <= today) {
+                    item.hidden = true;
+                } else {
+                    var icsDate = item.dataset.icsDate;
+                    var gcLink = item.querySelector('.gc-link');
+                    if (gcLink && icsDate) {
+                        gcLink.href = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bijbelbabbel&dates=' +
+                            icsDate + 'T173000Z%2F' + icsDate + 'T193000Z' +
+                            '&details=Bijbelkring+onder+leiding+van+dominee+Axel+Wicke.' +
+                            '&location=GJV+Zolder%2C+De+Vinkenhof%2C+Achterzeeweg+1%2C+2201+EM+Noordwijk';
+                    }
+                    if (firstNext) {
+                        item.classList.add('agenda-item-next');
+                        firstNext = false;
+                    }
+                }
+            });
         }
 
         // Email obfuscation — assembled at runtime to hinder scrapers
@@ -305,6 +398,9 @@
                 display.textContent = addr;
             }
         })();
+
+        // Dynamic agenda: hide past events, promote next upcoming
+        updateAgendaItems();
 
         // Dynamic footer year
         document.getElementById('footer-year').textContent = new Date().getFullYear();
