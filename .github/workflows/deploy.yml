@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - claude/bijbelbabbel-landing-page-ml19kd
 
 jobs:
   deploy:
