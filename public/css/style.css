@@ -475,7 +475,7 @@ header#home h1 {
 .agenda-details p  { font-size: 0.9rem; color: var(--beige-dark); margin-bottom: 0.25rem; opacity: 0.85; }
 
 .agenda-badge {
-    display: none;
+    display: inline-block;
     font-size: 0.68rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -486,8 +486,6 @@ header#home h1 {
     padding: 0.2rem 0.8rem;
     margin-bottom: 0.6rem;
 }
-
-.agenda-item-next .agenda-badge { display: inline-block; }
 
 .agenda-link {
     display: inline-block;
