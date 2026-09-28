@@ -645,7 +645,7 @@ address {
     height: 72px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: 10% 0%;
+    object-position: center 20%;
 }
 
 .contact-info h3  { color: var(--green-dark); margin-bottom: 0.2rem; font-size: 1.1rem; }
